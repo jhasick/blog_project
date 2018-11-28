@@ -1,0 +1,17 @@
+
+<style>
+ .color_text {
+ 	color: <%= @color %>;
+ 	background-color: gold;
+
+ }
+
+</style>
+
+<p class="color_text">Hello You!</p>
+
+<%= form_tag index_path do %>
+	<p><%= text_field_tag :name, nil, placeholder: "Enter a name" %></p>
+	<p><%= submit_tag :submit %></p>
+
+<% end %>
