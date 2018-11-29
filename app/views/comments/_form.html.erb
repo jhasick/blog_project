@@ -11,10 +11,7 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-    <%= form.label :author %>
-    <%= form.text_field :author, class: "form-control" %>
-  </div>
+  
 
   <div class="form-group">
     <%= form.label :comment_entry %>
@@ -23,6 +20,10 @@
 
   <div class="form-group">
     <%= form.hidden_field :post_id, value: @post.id %>
+  </div>
+
+  <div class="form-group">
+    <%= form.hidden_field :user_id, value: current_user.id %>
   </div>
 
   <div class="actions">
