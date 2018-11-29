@@ -20,7 +20,7 @@
 
 	<% @post.comments.each do |comment| %>
 		<div class="well">
-			<%= comment.user.email %> says... <br/>
+			<%= comment.user.username %> says... <br/>
 			<%= comment.comment_entry %>
 		</div>
 		<% end %>
