@@ -2,7 +2,7 @@
 
 <h1>Comments</h1>
 
-<table>
+<table class = "table">
   <thead>
     <tr>
       <th>Author</th>
@@ -14,9 +14,9 @@
   <tbody>
     <% @comments.each do |comment| %>
       <tr>
-        <td><%= comment.author %></td>
+        <td><%= comment.user.username %></td>
         <td><%= comment.comment_entry %></td>
-        <td><%= link_to 'Show', comment, class: "btn btn-secondary" %></td>
+        <td><%= link_to 'Show', comment %></td>
         <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
         <td><%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -26,6 +26,6 @@
 
 <br>
 
-<%= paginate @posts %> <br/>
+
 
 <%= link_to 'New Comment', new_comment_path %>
