@@ -6,7 +6,7 @@
 		<p><%= post.blog_entry.html_safe %></p>
 
 		<% post.comments.each do |comment| %>
-			<div class="well" style="background-color: pink">
+			<div class="well" style="background-color: grey; color: white">
 			<%= comment.user.username %> commented ... <br/>
 			<%= comment.comment_entry %>
 			</div>
